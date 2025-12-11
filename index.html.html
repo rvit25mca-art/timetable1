@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Table</title>
+
+    <!-- Aesthetic Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            background: #0d0f14;
+            color: #e3e3e3;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Updated Header Layout */
+        .header {
+            margin-bottom: 25px;
+            padding-top: 10px;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .logo {
+            width: 110px;
+            filter: drop-shadow(0 0 10px #00ffee);
+        }
+
+        .header-text h1,
+        .header-text h2 {
+            margin: 0;
+            background: linear-gradient(45deg, #00eaff, #ff4dff);
+            -webkit-background-clip: text;
+            color: transparent;
+            text-align: left;
+        }
+
+        .week-title {
+            font-size: 18px;
+            font-weight: 500;
+            color: #a8c9ff;
+            margin-top: 8px;
+        }
+
+        /* Responsive table container */
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            padding-bottom: 10px;
+        }
+
+        /* Table styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #161a21;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0px 0px 20px #000, inset 0px 0px 15px #222;
+            min-width: 900px;
+        }
+
+        th {
+            background: #1f252e;
+            padding: 12px;
+            font-weight: 500;
+            color: #7ed6ff;
+            border-bottom: 1px solid #333;
+        }
+
+        td {
+            padding: 12px;
+            text-align: center;
+            color: #e6e6e6;
+            border-bottom: 1px solid #262b33;
+        }
+
+        tr:nth-child(even) td {
+            background: #1a1f27;
+        }
+
+        caption {
+            padding: 10px;
+            font-size: 20px;
+            font-weight: 600;
+            color: #9dd3ff;
+        }
+
+        /* Vertical labels */
+        .vertical {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            background: #332f1e !important;
+            font-weight: bold;
+            color: #ffda7b !important;
+        }
+
+        .lunch {
+            background: #301c1c !important;
+            color: #ff8a8a !important;
+        }
+
+        .break {
+            background: #3a321f !important;
+            color: #ffe08c !important;
+        }
+
+        .highlight {
+            background: #233022 !important;
+            color: #9aff9a !important;
+            font-weight: 500;
+        }
+
+        .lab {
+            background: #2b1f33 !important;
+            color: #e3a8ff !important;
+        }
+
+        ::-webkit-scrollbar {
+            height: 7px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4c4c4c;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- Updated Header -->
+<div class="header">
+    <div class="header-content">
+        <img src="logo.png" alt="RVITM Logo" class="logo">
+        <div class="header-text">
+            <h1>RV Institute of Technology & Management</h1>
+            <h2>Department of MCA (2025–2026)</h2>
+            <div class="week-title">Section B</div>
+        </div>
+    </div>
+</div>
+
+<div class="table-container">
+<table>
+    <caption>Timetable</caption>
+
+    <tr>
+        <th>Day</th>
+        <th>9 – 10</th>
+        <th>10 – 11</th>
+        <th>11 – 11:20</th>
+        <th>11:20 – 12:20</th>
+        <th>12:20 – 1:20</th>
+        <th>1:20 – 2</th>
+        <th>2 – 3</th>
+        <th>3 – 4</th>
+        <th>4 – 5</th>
+    </tr>
+
+    <tr>
+        <td>Monday</td>
+        <td>PPSC</td>
+        <td>DMGT</td>
+        <td class="vertical break" rowspan="5">TEA BREAK</td>
+        <td>OS</td>
+        <td>DBMS</td>
+        <td class="vertical lunch" rowspan="6">LUNCH</td>
+        <td>WT</td>
+        <td colspan="2" class="highlight">Mentors Meeting</td>
+    </tr>
+
+    <tr>
+        <td>Tuesday</td>
+        <td>WT</td>
+        <td>DMGT</td>
+        <td colspan="2" class="lab">DBMS / WT Lab</td>
+        <td>OS</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+
+    <tr>
+        <td>Wednesday</td>
+        <td>OS</td>
+        <td>DBMS</td>
+        <td>PPSC</td>
+        <td>DMGT</td>
+        <td colspan="2" class="highlight">Mentors Meeting</td>
+        <td>-</td>
+    </tr>
+
+    <tr>
+        <td>Thursday</td>
+        <td>DBMS</td>
+        <td>WT</td>
+        <td colspan="2" class="lab">DBMS / WT Lab</td>
+        <td colspan="2" class="lab">PPSC / DBMS / WT Lab</td>
+        <td>-</td>
+    </tr>
+
+    <tr>
+        <td>Friday</td>
+        <td>DMGT</td>
+        <td>PPSC</td>
+        <td>DBMS</td>
+        <td>WT</td>
+        <td>OS</td>
+        <td>-</td>
+        <td>-</td>
+    </tr>
+
+    <tr>
+        <td>Saturday</td>
+        <td colspan="5" class="highlight">Workshops / Placement / Technical Talks</td>
+        <td colspan="3">-</td>
+    </tr>
+
+</table>
+</div>
+
+</body>
+</html>
